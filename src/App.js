@@ -31,7 +31,7 @@ function App() {
               <Header></Header>
               <Assigndriver></Assigndriver>
             </Route>
-            <Route path="/login">
+            <Route exact path="/">
             <Header></Header>
               <Login />
             </Route>

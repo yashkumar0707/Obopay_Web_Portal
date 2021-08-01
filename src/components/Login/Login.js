@@ -46,8 +46,7 @@ const Login = (props) => {
         e.preventDefault()
 
         console.log(e.target.name1.value)
-        console.log(e.target.email.value)
-        console.log(this.state.selectedID)
+        window.location.href="/dashboard"
         // await fetch(process.env.REACT_APP_URL + 'api/users/' + this.state.selectedID[0], {
         //   method: 'PUT',
         //   body: JSON.stringify({
@@ -84,9 +83,9 @@ const Login = (props) => {
           <div style={{width:'50%', paddingLeft:'15%', paddingTop:'-5%'}}>
                 <Card >
                     <form onSubmit={handleDialog} style={{ width: '80%', paddingLeft:'10%' }}>
-                        <DialogTitle id="form-dialog-title">Trip Details</DialogTitle>
+                        <DialogTitle id="form-dialog-title">Login Details</DialogTitle>
                         <DialogContentText>
-                            Please fill in the trip details.
+                            Please fill in the login details.
                         </DialogContentText>
                         
                         <TextField

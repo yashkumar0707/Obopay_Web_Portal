@@ -101,9 +101,9 @@ class Dashboard extends React.Component {
     //     this.setState({ data: json.data, rows: json.data })
     //     console.log(this.state.data[0])
     //   })
-    var data1 = [{ 'id': 5, 'trip_id': 236, 'start_point': 'Hyd', 'end_point': 'Blr', 'start_date': '12-06-21', 'end_date': '14-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 5000, 'toll_limit': 5000, 'driver_limit': 5000 },
-    { 'id': 6, 'trip_id': 236, 'start_point': 'Hyd', 'end_point': 'Blr', 'start_date': '12-06-21', 'end_date': '14-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 5000, 'toll_limit': 5000, 'driver_limit': 5000 },
-    { 'id': 7, 'trip_id': 236, 'start_point': 'Hyd', 'end_point': 'Blr', 'start_date': '12-06-21', 'end_date': '14-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 5000, 'toll_limit': 5000, 'driver_limit': 5000 }] 
+    var data1 = [{ 'id': 5, 'trip_id': 236, 'start_point': 'Hyd', 'end_point': 'Blr', 'start_date': '12-06-21', 'end_date': '14-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 8000, 'toll_limit': 7000, 'driver_limit': 5000 },
+    { 'id': 6, 'trip_id': 237, 'start_point': 'Hyd', 'end_point': 'Blr', 'start_date': '15-06-21', 'end_date': '17-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 8000, 'toll_limit': 7000, 'driver_limit': 5000 },
+    { 'id': 7, 'trip_id': 238, 'start_point': 'Hyd', 'end_point': 'Blr', 'start_date': '17-06-21', 'end_date': '19-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 8000, 'toll_limit': 7000, 'driver_limit': 5000 }] 
     this.setState({ data: data1 })
   }
   render() {
@@ -300,7 +300,7 @@ class Dashboard extends React.Component {
             <div style={{ height: 400, width: '95%', paddingLeft: '2%' }}>
               <DataGrid rows={this.state.data} id={Math.random()} columns={this.state.columns} pageSize={5} checkboxSelection onSelectionModelChange={handleClick} className={classes.colCell} />
               <Dialog open={this.state.openDialog} onClose={handleClose} aria-labelledby="form-dialog-title">
-                <DialogTitle id="form-dialog-title" style={{backgroundColor:'blue'}}>Driver Details</DialogTitle>
+                <DialogTitle id="form-dialog-title" style={{backgroundColor:'#243C84', color:'white'}}>Driver Details</DialogTitle>
                 <DialogContent>
                   <DialogContentText>
                    Details of the driver and the funds remaining.
@@ -334,15 +334,15 @@ class Dashboard extends React.Component {
                       </ListItem>
                       <Divider />
                       <ListItem button>
-                        <ListItemText primary="Fuel Limit | Remaining" secondary={this.state.data[0].fuel_limit+ "  | 400"} />
+                        <ListItemText primary="Fuel Limit | Remaining" secondary={this.state.data[0].fuel_limit+ "  | 4000"} />
                       </ListItem>
                       <Divider />
                       <ListItem button>
-                        <ListItemText primary="Toll Limit | Remaining" secondary={this.state.data[0].toll_limit+ "  | 400"} />
+                        <ListItemText primary="Toll Limit | Remaining" secondary={this.state.data[0].toll_limit+ "  | 4000"} />
                       </ListItem>
                       <Divider />
                       <ListItem button>
-                        <ListItemText primary="Driver Limit | Remaining" secondary={this.state.data[0].driver_limit+ "  | 400"} />
+                        <ListItemText primary="Driver Limit | Remaining" secondary={this.state.data[0].driver_limit+ "  | 4000"} />
                       </ListItem>
                       <Divider />
                     </List>
