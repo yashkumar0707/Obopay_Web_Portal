@@ -1,0 +1,51 @@
+.card{
+    margin-left: 36.5vh;
+    margin-top:5%;
+}
+
+.root{
+    max-width: 250px;
+    margin-left: 15%;
+    margin-top:10%
+}
+
+.media {
+    height: 0;
+    padding-top: 56.25%;
+}
+
+.second_header{
+    /* height:0.5vh; */
+    /* background-color: #E3E7E5; */
+    background-color: white;
+    width:100%;
+}
+.cards{
+    /* margin-top: 10%; */
+}
+.toggle_button{
+    margin-left: 75%;
+}
+.inbetween_header{
+    /* height:10px; */
+    /* margin-top: -50px; */
+    background-color: #4a148c ;
+    /* max-height: 10, */
+}
+
+.dashboard{
+    margin-top:-10vh;
+    max-width: 100%;
+}
+
+.icons_edit{
+    margin-left: 3%;
+}
+
+.icons_header{
+    /* padding-right: 3%; */
+}
+
+.table.head{
+    background-color: black;
+}

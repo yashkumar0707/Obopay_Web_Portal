@@ -1,0 +1,9 @@
+{
+    "TITLE":"OCE Administration Tool",
+    "SERVER_URL": "https://reqres.in/",
+    "THEME_COLORS": {
+      "PRIMARY": "#007bff",
+      "SECONDARY": "#fc3"
+    },
+    "DASHBOARD":["Dashboard", "PODs", "Services", "OCI Native"]
+}
