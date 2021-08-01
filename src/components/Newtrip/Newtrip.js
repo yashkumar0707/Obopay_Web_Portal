@@ -105,7 +105,7 @@ const Newtrip = (props) => {
                             value={startdate} onChange={e => setStartDate(e.target.value)}
                         />
                         <TextField
-                            autoFocus
+                            
                             margin="dense"
                             id="email"
                             label="End Date"
@@ -115,7 +115,7 @@ const Newtrip = (props) => {
                             value={enddate} onChange={e => setEndDate(e.target.value)}
                         />
                         <TextField
-                            autoFocus
+                            
                             margin="dense"
                             id="email"
                             label="Start Point"
@@ -125,7 +125,7 @@ const Newtrip = (props) => {
                             value={startpoint} onChange={e => setStartPoint(e.target.value)}
                         />
                         <TextField
-                            autoFocus
+                            
                             margin="dense"
                             id="email"
                             label="End Point"
@@ -135,7 +135,7 @@ const Newtrip = (props) => {
                             value={endpoint} onChange={e => setEndPoint(e.target.value)}
                         />
                         <TextField
-                            autoFocus
+                            
                             margin="dense"
                             id="email"
                             label="Toll Limit"
@@ -145,7 +145,7 @@ const Newtrip = (props) => {
                             value={toll_limit} onChange={e => setToll(e.target.value)}
                         />
                         <TextField
-                            autoFocus
+                            
                             margin="dense"
                             id="email"
                             label="Fuel Limit"
@@ -155,7 +155,7 @@ const Newtrip = (props) => {
                             value={fuel_limit} onChange={e => setFuel(e.target.value)}
                         />
                         <TextField
-                            autoFocus
+                            
                             margin="dense"
                             id="email"
                             label="Driver Limit"
