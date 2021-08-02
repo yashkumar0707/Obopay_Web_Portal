@@ -102,7 +102,7 @@ class Dashboard extends React.Component {
     //     console.log(this.state.data[0])
     //   })
     var data1 = [{ 'id': 5, 'trip_id': 236, 'start_point': 'Hydrebad', 'end_point': 'Bangalore', 'start_date': '12-06-21', 'end_date': '14-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 8000, 'toll_limit': 7000, 'driver_limit': 5000 },
-    { 'id': 6, 'trip_id': 237, 'start_point': 'Mumbai', 'Delhi': 'Blr', 'start_date': '15-06-21', 'end_date': '17-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 8000, 'toll_limit': 7000, 'driver_limit': 5000 },
+    { 'id': 6, 'trip_id': 237, 'start_point': 'Mumbai', 'end_point':'Delhi', 'start_date': '15-06-21', 'end_date': '17-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 8000, 'toll_limit': 7000, 'driver_limit': 5000 },
     { 'id': 7, 'trip_id': 238, 'start_point': 'Kolkata', 'end_point': 'Chennai', 'start_date': '17-06-21', 'end_date': '19-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 8000, 'toll_limit': 7000, 'driver_limit': 5000 }] 
     this.setState({ data: data1 })
   }

@@ -38,9 +38,9 @@ class Assigndriver extends React.Component {
         //     this.setState({ data: json.data, rows: json.data })
         //     console.log(this.state.data[0])
         //   })
-        var data1 = [{ 'id': 5, 'trip_id': 236, 'start_point': 'Hyd', 'end_point': 'Blr', 'start_date': '12-06-21', 'end_date': '14-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 5000, 'toll_limit': 5000, 'driver_limit': 5000 },
-        { 'id': 6, 'trip_id': 236, 'start_point': 'Hydrebad', 'end_point': 'Blr', 'start_date': '12-06-21', 'end_date': '14-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 5000, 'toll_limit': 5000, 'driver_limit': 5000 },
-        { 'id': 7, 'trip_id': 236, 'start_point': 'Hydrebad', 'end_point': 'Blr', 'start_date': '12-06-21', 'end_date': '14-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 5000, 'toll_limit': 5000, 'driver_limit': 5000 }]
+        var data1 = [{ 'id': 5, 'trip_id': 251, 'start_point': 'Hydrebad', 'end_point': 'Bangalore', 'start_date': '12-06-21', 'end_date': '14-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 8000, 'toll_limit': 7000, 'driver_limit': 5000 },
+        { 'id': 6, 'trip_id': 252, 'start_point': 'Mumbai', 'end_point':'Delhi', 'start_date': '15-06-21', 'end_date': '17-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 8000, 'toll_limit': 7000, 'driver_limit': 5000 },
+        { 'id': 7, 'trip_id': 253, 'start_point': 'Kolkata', 'end_point': 'Chennai', 'start_date': '17-06-21', 'end_date': '19-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 8000, 'toll_limit': 7000, 'driver_limit': 5000 }]
         this.setState({ data: data1 })
     }
     render() {
@@ -116,8 +116,8 @@ class Assigndriver extends React.Component {
                     <div className="cards">
                         <Grid container spacing={3}>
                             {this.state.data.map(person => (
-                                <Grid style={{paddingRight:30}}>
-                                    <Card className="root" style={{ width: '200px'}}>
+                                <Grid style={{ paddingRight: 30 }}>
+                                    <Card className="root" style={{ width: '200px' }}>
                                         <CardHeader
                                             avatar={
                                                 <Avatar aria-label="recipe" className="avatar">
@@ -167,20 +167,20 @@ class Assigndriver extends React.Component {
                                     Please fill in the details to edit the current user.
                                 </DialogContentText>
                                 <form onSubmit={handleDialog}>
-                                    <Select style={{width:200}}
-                                        // native
-                                        // value={state.age}
-                                        // onChange={handleChange}
-                                        // label="Age"
-                                        // inputProps={{
-                                        //     name: 'age',
-                                        //     id: 'outlined-age-native-simple',
-                                        // }}
+                                    <Select style={{ width: 200 }}
+                                    // native
+                                    // value={state.age}
+                                    // onChange={handleChange}
+                                    // label="Age"
+                                    // inputProps={{
+                                    //     name: 'age',
+                                    //     id: 'outlined-age-native-simple',
+                                    // }}
                                     >
                                         <option aria-label="None" value="" />
-                                        <option value={10}>Driver X</option>
-                                        <option value={20}>Driver Y</option>
-                                        <option value={30}>Driver Z</option>
+                                        <option value={10}>Driver Nagarajan</option>
+                                        <option value={20}>Driver Rajanikanta</option>
+                                        <option value={30}>Driver Thirumal</option>
                                     </Select>
                                     <DialogActions>
                                         <Button onClick={handleClose} color="primary">
