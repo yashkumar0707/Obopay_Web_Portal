@@ -23,7 +23,8 @@ class Assigndriver extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            openDialog: false
+            openDialog: false,
+            openAck:false
         }
     }
     componentWillMount() {
@@ -51,11 +52,18 @@ class Assigndriver extends React.Component {
         //close dialog
         const handleClose = () => {
             this.setState({ openDialog: false })
+            clickedAck()
         };
-
+        const handleCloseAck = () => {
+            this.setState({ openAck: false })
+        };
         const clicked = (e) => {
             console.log("Hi", e);
             this.setState({ openDialog: true })
+        };
+        const clickedAck = (e) => {
+            console.log("Hi", e);
+            this.setState({ openAck: true })
         };
         //editing details
         const handleDialog = async (e) => {
@@ -191,6 +199,20 @@ class Assigndriver extends React.Component {
                                         </Button>
                                     </DialogActions>
                                 </form>
+                            </DialogContent>
+
+                        </Dialog>
+                        <Dialog open={this.state.openAck} onClose={handleCloseAck} aria-labelledby="form-dialog-title">
+                            <DialogTitle id="form-dialog-title">Driver Details</DialogTitle>
+                            <DialogContent>
+                                <DialogContentText>
+                                    Driver assignment has been successfully stored.
+                                </DialogContentText>
+                                <DialogActions>
+                                        <Button onClick={handleCloseAck} color="primary">
+                                            Close
+                                        </Button>
+                                    </DialogActions>
                             </DialogContent>
 
                         </Dialog>

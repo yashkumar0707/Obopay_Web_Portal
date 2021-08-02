@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Dashboard from './components/Dashboard/Dashboard'
 import Newtrip from './components/Newtrip/Newtrip'
 import Assigndriver from './components/Assigndriver/Assigndriver'
+import PreviousTrips from './components/PreviousTrips/PreviousTrips';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Login from './components/Login/Login'
 function App() {
@@ -30,6 +31,11 @@ function App() {
               <Sidebar></Sidebar>
               <Header></Header>
               <Assigndriver></Assigndriver>
+            </Route>
+            <Route path="/previoustrips">
+              <Sidebar></Sidebar>
+              <Header></Header>
+              <PreviousTrips />
             </Route>
             <Route exact path="/">
             <Header></Header>

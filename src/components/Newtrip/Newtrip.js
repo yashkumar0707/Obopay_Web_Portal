@@ -101,7 +101,7 @@ const Newtrip = (props) => {
                                 Please fill in the trip details.
                             </DialogContentText>
                             <TextField
-
+                                autoFocus
                                 margin="dense"
                                 id="email"
                                 label="Start Point"
@@ -121,7 +121,7 @@ const Newtrip = (props) => {
                                 value={endpoint} onChange={e => setEndPoint(e.target.value)}
                             />
                             <TextField
-                                autoFocus
+                                
                                 margin="dense"
                                 id="name1"
                                 name="name1"
@@ -218,6 +218,7 @@ const Newtrip = (props) => {
                             </Button>
                         </DialogActions>
                     </Dialog>
+                    
                 </div>
             </div >
         </div>

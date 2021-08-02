@@ -14,10 +14,11 @@ import {
 //import icons from react icons
 import { FaList, FaRegHeart } from "react-icons/fa";
 import { FiHome, FiLogOut, FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
-import { RiPencilLine } from "react-icons/ri";
+import { RiPencilLine, RiHistoryFill } from "react-icons/ri";
 import { BiCog } from "react-icons/bi";
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
-
+import {AiFillEdit} from "react-icons/ai"
+import {MdAccountBalance} from "react-icons/md"
 //import sidebar css from react-pro-sidebar module and our custom css 
 import "react-pro-sidebar/dist/css/styles.css";
 import "./Side.css";
@@ -61,7 +62,7 @@ const Sidebar = () => {
 
 
              
-                <MenuItem active={false} icon={<FiHome />}>
+                <MenuItem active={false} icon={<AiFillEdit />}>
                 <Link to='/newtrip'>
                   New Trip
                   </Link>
@@ -73,8 +74,8 @@ const Sidebar = () => {
               
                 <MenuItem active={false} icon={<FaList />}><Link to='/assigndriver'>Assign Driver</Link></MenuItem>
               
-              <MenuItem icon={<FaRegHeart />}>Previous</MenuItem>
-              <MenuItem icon={<RiPencilLine />}>Rebalance</MenuItem>
+              <MenuItem icon={<RiHistoryFill/>}><Link to='/previoustrips'>Previous</Link></MenuItem>
+              <MenuItem icon={<MdAccountBalance/>}>Rebalance</MenuItem>
               {/* <MenuItem icon={<BiCog />}>Settings</MenuItem> */}
             </Menu>
           </SidebarContent>
