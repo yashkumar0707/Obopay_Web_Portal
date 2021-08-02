@@ -20,7 +20,11 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItem from '@material-ui/core/ListItem';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
-
+import {
+    MuiPickersUtilsProvider,
+    KeyboardTimePicker,
+    KeyboardDatePicker,
+  } from '@material-ui/pickers'; 
 const Login = (props) => {
 
     // console.log(id)
@@ -99,20 +103,17 @@ const Login = (props) => {
                             value={username} onChange={e => setUsername(e.target.value)}
                         />
                         <TextField
-                            autoFocus
+                            
                             margin="dense"
                             id="email"
                             label="Password"
-                            type="text"
+                            type="password"
                             name="email"
                             fullWidth
                             value={password} onChange={e => setPassword(e.target.value)}
                         />
                       
-                        {/* <DialogActions> */}
-                        <Button color="primary">
-                            Cancel
-                        </Button>
+                      
                         <Button type="submit" color="primary">
                             Submit
                         </Button>

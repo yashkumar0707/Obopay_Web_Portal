@@ -100,7 +100,8 @@ const Newtrip = (props) => {
                             id="name1"
                             name="name1"
                             label="Start Date"
-                            type="text"
+                            type="date"
+                            defaultValue="2017-05-24"
                             fullWidth
                             value={startdate} onChange={e => setStartDate(e.target.value)}
                         />
