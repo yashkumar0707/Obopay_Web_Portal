@@ -101,9 +101,9 @@ class Dashboard extends React.Component {
     //     this.setState({ data: json.data, rows: json.data })
     //     console.log(this.state.data[0])
     //   })
-    var data1 = [{ 'id': 5, 'trip_id': 236, 'start_point': 'Hyd', 'end_point': 'Blr', 'start_date': '12-06-21', 'end_date': '14-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 8000, 'toll_limit': 7000, 'driver_limit': 5000 },
-    { 'id': 6, 'trip_id': 237, 'start_point': 'Hyd', 'end_point': 'Blr', 'start_date': '15-06-21', 'end_date': '17-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 8000, 'toll_limit': 7000, 'driver_limit': 5000 },
-    { 'id': 7, 'trip_id': 238, 'start_point': 'Hyd', 'end_point': 'Blr', 'start_date': '17-06-21', 'end_date': '19-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 8000, 'toll_limit': 7000, 'driver_limit': 5000 }] 
+    var data1 = [{ 'id': 5, 'trip_id': 236, 'start_point': 'Hydrebad', 'end_point': 'Bangalore', 'start_date': '12-06-21', 'end_date': '14-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 8000, 'toll_limit': 7000, 'driver_limit': 5000 },
+    { 'id': 6, 'trip_id': 237, 'start_point': 'Mumbai', 'Delhi': 'Blr', 'start_date': '15-06-21', 'end_date': '17-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 8000, 'toll_limit': 7000, 'driver_limit': 5000 },
+    { 'id': 7, 'trip_id': 238, 'start_point': 'Kolkata', 'end_point': 'Chennai', 'start_date': '17-06-21', 'end_date': '19-06-21', 'req_limit': 20000, 'app_limit': 18000, 'driver_id': 100, 'fuel_limit': 8000, 'toll_limit': 7000, 'driver_limit': 5000 }] 
     this.setState({ data: data1 })
   }
   render() {
@@ -211,22 +211,7 @@ class Dashboard extends React.Component {
           </div>
           <div className="second_header">
             <Toolbar className="second_header">
-              <b>Home</b>
-
-              <ToggleButtonGroup
-                value={this.state.alignment}
-                exclusive
-                onChange={handleAlignment}
-                aria-label="text alignment"
-                className="toggle_button"
-              >
-                <ToggleButton value="table" aria-label="left aligned">
-                  Table
-                </ToggleButton>
-                <ToggleButton value="card" aria-label="centered">
-                  Card
-                </ToggleButton>
-              </ToggleButtonGroup>
+              <b>Current Trip</b>
             </Toolbar>
             <div style={{ height: 10 }}>
               <Toolbar className="inbetween_header"></Toolbar>
@@ -234,13 +219,13 @@ class Dashboard extends React.Component {
             <Toolbar className="second_header">
               {this.state.selectedItems == 1 &&
                 <div className="icons_header">
-                  <Tooltip title="Edit">
-                    <EditIcon style={{ paddingRight: 10 }} onClick={handleClickOpen}></EditIcon>
+                  {/* <Tooltip title="Edit">
+                    <EditIcon style={{ paddingRight: 10 }} ></EditIcon>
                   </Tooltip>
                   <Tooltip title="Delete">
                     <DeleteIcon onClick={deleteElement} style={{ paddingRight: 10 }}></DeleteIcon>
-                  </Tooltip>
-                  <Tooltip title="View">
+                  </Tooltip> */}
+                  <Tooltip title="View" onClick={handleClickOpen}>
                     <VisibilityIcon></VisibilityIcon>
                   </Tooltip>
                 </div>
@@ -296,7 +281,7 @@ class Dashboard extends React.Component {
               </Grid>
             </div>} */}
           {/* {this.state.alignment == 'table' && */}
-          <div>
+          <div className="width-card">
             <div style={{ height: 400, width: '95%', paddingLeft: '2%' }}>
               <DataGrid rows={this.state.data} id={Math.random()} columns={this.state.columns} pageSize={5} checkboxSelection onSelectionModelChange={handleClick} className={classes.colCell} />
               <Dialog open={this.state.openDialog} onClose={handleClose} aria-labelledby="form-dialog-title">

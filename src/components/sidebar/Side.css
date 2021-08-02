@@ -1,6 +1,6 @@
 #sidebar {
     position: fixed;
-    width: 220px;
+    width: 12%;
     margin-top:0vh;
     height:100%;
   }
@@ -76,3 +76,16 @@
       overflow: hidden;
     }
   }
+
+  @media only screen and (max-width: 1300px) {
+    #sidebar {
+      width: 15%;
+      
+    }
+  }
+  /* @media only screen and (min-width: 1000px) {
+    #sidebar {
+      width: 15%;
+      
+    }
+  } */
